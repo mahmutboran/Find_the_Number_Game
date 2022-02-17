@@ -40,7 +40,7 @@ btn.addEventListener("click", () => {
         btn.style.display = "none"
     }
     if (Number(gues.textContent) == 0) {
-        result.innerHTML = "Sorry You Lost"
+        result.innerHTML = "Sorry You Lost <br> The number is " + randomNumber
         tryAgain.style.display = "block"
         btn.style.display = "none"
      
