@@ -34,7 +34,7 @@ btn.addEventListener("click", () => {
 
     else {
         gues.innerHTML = Number(gues.textContent) - 1
-        result.innerHTML = "&#127882 Congrats &#127882 \nThe number is " + randomNumber
+        result.innerHTML = "&#127882 Congrats &#127882 <br> The number is " + randomNumber
         num.value = ""
         tryAgain.style.display = "block"
         btn.style.display = "none"
