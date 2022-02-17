@@ -4,6 +4,8 @@ let result = document.getElementById("result");
 let count = document.getElementById("count")
 let gues = document.getElementById("gues")
 let tryAgain = document.getElementById("tryAgain")
+let form = document.querySelector("form")
+
 
 let randomNumber = Math.trunc((Math.random() * 100) + 1)
 console.log(randomNumber)
@@ -38,13 +40,20 @@ btn.addEventListener("click", () => {
         btn.style.display = "none"
     }
     if (Number(gues.textContent) == 0) {
+        result.innerHTML = "Sorry You Lost"
         tryAgain.style.display = "block"
         btn.style.display = "none"
+     
     }
 })
 
 //tryAgain button added event
+
 tryAgain.addEventListener("click", () => {
     window.location.reload()
 })
 
+//form event deffault
+form.addEventListener("click",(e)=>{
+    e.preventDefault()
+})
