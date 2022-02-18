@@ -42,7 +42,8 @@ btn.addEventListener("click", () => {
     if (Number(gues.textContent) == 0) {
         result.innerHTML = "Sorry You Lost <br> The number is " + randomNumber
         tryAgain.style.display = "block"
-        btn.style.display = "none"
+       /*  btn.style.display = "none" */
+       btn.disabled = true;
      
     }
 })
@@ -50,6 +51,9 @@ btn.addEventListener("click", () => {
 //tryAgain button added event
 
 tryAgain.addEventListener("click", () => {
+/*   btn.removeEventListener("click",()=>{
+
+  }) */
     window.location.reload()
 })
 
